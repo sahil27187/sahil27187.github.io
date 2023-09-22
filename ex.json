@@ -1,0 +1,35 @@
+{
+  "name": "Weather API",
+  "description": "Provides current weather data for a given location",
+  "endpoints": [
+    {
+      "url": "/weather",
+      "method": "GET",
+      "description": "Returns the current weather data for a location",
+      "parameters": [
+        {
+          "name": "location",
+          "type": "string",
+          "description": "The name of the location to get weather data for"
+        }
+      ],
+      "response": {
+        "type": "object",
+        "properties": {
+          "temperature": {
+            "type": "number",
+            "description": "The current temperature in degrees Celsius"
+          },
+          "humidity": {
+            "type": "number",
+            "description": "The current humidity level as a percentage"
+          },
+          "wind_speed": {
+            "type": "number",
+            "description": "The current wind speed in kilometers per hour"
+          }
+        }
+      }
+    }
+  ]
+}
